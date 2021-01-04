@@ -1,0 +1,52 @@
+import styled from 'styled-components/native';
+
+export const Container = styled.View`
+    flex: 1;
+    background-color: #38A1CE;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const Image = styled.Image`
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    opacity: 0.2;
+`;
+
+export const Image_Logo = styled.Image`
+    width: 65%;
+    height: 15%;
+    margin-bottom: 2%;
+`;
+
+export const Input = styled.TextInput`
+    color: #fff;
+    border: 0.6px solid #fff;
+    width: 75%;
+    height: 35px;
+    padding: 0 15px;
+    margin: 10px 0;
+    border-radius: 15px;
+    font-size: 18px; 
+`;
+
+export const Button = styled.TouchableOpacity`
+    width: 75%;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const Button_Text = styled.Text`
+   font-size: 18px;
+   color: #38A1CE;
+`;
+
+export const Text = styled.Text`
+   font-size: 16px;
+   color: #fff;
+`;

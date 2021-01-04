@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { StatusBar } from "expo-status-bar";
+import { NavigationContainer } from '@react-navigation/native';
+import RootNavigator from './src/routes/index';
+import './src/services/firebase.js';
+//import { LogBox } from 'react-native';
+//LogBox.ignoreLogs(['Setting a timer']);
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return (
+        <SafeAreaProvider style={{backgroundColor:'#38A1CE'}}>
+            <NavigationContainer>
+                <RootNavigator />
+            </NavigationContainer>
+            <StatusBar style="light" style={{opacity: 0.4}} />
+        </SafeAreaProvider>
+    );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
