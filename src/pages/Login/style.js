@@ -7,17 +7,19 @@ export const Container = styled.View`
     align-items: center;
 `;
 
-export const Image = styled.Image`
-    position: absolute;
+export const Content = styled.View`
+    background-color: #38A1CE;
     width: 100%;
-    height: 40%;
-    opacity: 0.2;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.4;
+    position: absolute;
 `;
 
 export const Image_Logo = styled.Image`
     width: 65%;
-    height: 15%;
-    margin-bottom: 2%;
+    height: 100px;
 `;
 
 export const Input = styled.TextInput`

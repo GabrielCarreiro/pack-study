@@ -1,6 +1,7 @@
 import React from 'react';
 import { createStackNavigator} from '@react-navigation/stack';
-import Login from '../pages/Login/index';
+import Login from '../pages/login/index';
+import SignUp from '../pages/signUp/index';
 
 const Auth= createStackNavigator();
 
@@ -10,6 +11,7 @@ const AuthRoutes = () =>{
             headerShown: false,       
         }}>
             <Auth.Screen name="Login" component={Login} />
+            <Auth.Screen name="signUp" component={SignUp } />
         </Auth.Navigator>
     )
 }
