@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "pack-study",
-    "slug": "pack-study",
+    "name": "Pack Study",
+    "slug": "Pack-Study",
     "version": "1.0.0",
     "orientation": "portrait",
     "sdkVersion": "40.0.0",
@@ -23,7 +23,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#ffffff"
       },
       "package": "com.trainner.packStudy"
     },

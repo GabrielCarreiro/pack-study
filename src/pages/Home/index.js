@@ -1,7 +1,6 @@
 import React from 'react';
 import { MaterialIcons } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons'; 
-import { Foundation } from '@expo/vector-icons';   
+import { MaterialCommunityIcons } from '@expo/vector-icons';    
 import { Fontisto } from '@expo/vector-icons'; 
 import { Container, Content, Card, Title_Card } from './styles';
 import { useAuth } from '../../hooks/auth';

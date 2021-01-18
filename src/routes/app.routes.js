@@ -8,9 +8,9 @@ import Question from '../pages/question';
 import News from '../pages/news';
 import SelectedContent from '../pages/selectedContent';
 import { useAuth } from '../hooks/auth';
+import { MaterialIcons } from '@expo/vector-icons';
 import { createDrawerNavigator,
          DrawerContentScrollView,
-         DrawerItemList,
          DrawerItem } from '@react-navigation/drawer';
 
 const AppRoutes = () => {
@@ -19,9 +19,19 @@ const AppRoutes = () => {
 
     const App = createDrawerNavigator();
 
-    function CustomDrawerContent(props) {
+    function CustomDrawerContent({navigation}) {
         return (
-            <DrawerContentScrollView {...props}>
+            <DrawerContentScrollView >
+                <DrawerItem label="Trilha Dev" icon={ () =>(
+                    <MaterialIcons name="computer" size={50} color="#fff" />
+                )}  onPress={() =>{
+                    navigation.navigate('conteudo', {trail: 'Dev'})}}/>
+                <DrawerItem label="Trilha UX"  onPress={() =>{
+                    navigation.navigate('conteudo', {trail: 'UX'})}}/>
+                <DrawerItem label="Trilha QA"  onPress={() =>{
+                    navigation.navigate('conteudo', {trail: 'QA'})}}/>
+                <DrawerItem label="Notícias"  onPress={() =>{
+                    navigation.navigate('noticias', {trail: 'News'})}}/>
                 <DrawerItem label="Deslogar" onPress={() => signOut()} />
             </DrawerContentScrollView>
         );
