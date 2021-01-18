@@ -9,6 +9,8 @@ import News from '../pages/news';
 import SelectedContent from '../pages/selectedContent';
 import { useAuth } from '../hooks/auth';
 import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons'; 
 import { createDrawerNavigator,
          DrawerContentScrollView,
          DrawerItem } from '@react-navigation/drawer';
@@ -22,17 +24,25 @@ const AppRoutes = () => {
     function CustomDrawerContent({navigation}) {
         return (
             <DrawerContentScrollView >
-                <DrawerItem label="Trilha Dev" icon={ () =>(
-                    <MaterialIcons name="computer" size={50} color="#fff" />
-                )}  onPress={() =>{
-                    navigation.navigate('conteudo', {trail: 'Dev'})}}/>
-                <DrawerItem label="Trilha UX"  onPress={() =>{
-                    navigation.navigate('conteudo', {trail: 'UX'})}}/>
-                <DrawerItem label="Trilha QA"  onPress={() =>{
-                    navigation.navigate('conteudo', {trail: 'QA'})}}/>
-                <DrawerItem label="Notícias"  onPress={() =>{
-                    navigation.navigate('noticias', {trail: 'News'})}}/>
-                <DrawerItem label="Deslogar" onPress={() => signOut()} />
+                <DrawerItem  icon={ () =>(
+                        <MaterialIcons name="computer" size={20} color="#000" />
+                )} label="Trilha Dev" onPress={() =>{navigation.navigate('conteudo', {trail: 'Dev'})}}/>
+
+                <DrawerItem label="Trilha UX" icon={ () =>(
+                        <MaterialIcons name="design-services" size={20} color="#000"/>
+                )}  onPress={() =>{navigation.navigate('conteudo', {trail: 'UX'})}}/>
+
+                <DrawerItem label="Trilha QA" icon={ () =>(
+                        <Fontisto name="test-tube"  size={20} color="#000" />
+                )} onPress={() =>{ navigation.navigate('conteudo', {trail: 'QA'})}}/>
+
+                <DrawerItem label="Notícias"  icon={ () =>(
+                        <MaterialCommunityIcons name="newspaper-variant-outline" size={20} color="#000" />
+                )} onPress={() =>{navigation.navigate('noticias', {trail: 'News'})}}/>
+
+                <DrawerItem label="Deslogar" icon={ () =>(
+                        <MaterialCommunityIcons name="exit-to-app" size={20} color="#000" />
+                )} onPress={() => signOut()} />
             </DrawerContentScrollView>
         );
     };
