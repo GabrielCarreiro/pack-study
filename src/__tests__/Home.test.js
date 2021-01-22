@@ -10,7 +10,7 @@ test('Testando os textos na pagina Home', async () => {
     expect(getByText('Trilha Dev')).not.toBeNull();
     expect(getByText('Trilha UX')).not.toBeNull();
     expect(getByText('Trilha QA')).not.toBeNull();
-    expect(getByText('Dicas')).not.toBeNull();
+    expect(getByText('Notícias')).not.toBeNull();
 
 });
 
